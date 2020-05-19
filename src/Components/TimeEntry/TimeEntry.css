@@ -1,0 +1,42 @@
+/*
+ * TimeEntry css File
+*/
+
+.TimeEntry {
+    height: 300px;
+    width: 500px;
+    display: inline-block;
+    border: 1px solid;
+    padding: 20px;
+    margin: 20px;
+}
+.timeEntry {
+    display: flex;
+    padding: 10px;
+    margin: 20px 0;
+}
+.entryContainer {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    grid-column-gap: 15px;
+}
+.label {
+    padding-left: 8px !important;
+}
+.formControl {
+    padding-left: 8px !important;
+    width: 201px;
+    display: flex !important;
+}
+.fcontainer {
+    width: 125px;
+}
+.textField {
+    /* width: 200; */
+    width: 125px;
+}
+.btnSubmit{
+    display: flex !important;
+    position: relative;
+    top: 88px;
+}

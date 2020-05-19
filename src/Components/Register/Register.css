@@ -1,0 +1,30 @@
+
+.Register {
+    height: 450px;
+    width: 500px;
+    display: inline-block;
+    border: 1px solid;
+    padding: 20px;
+    margin: 20px;
+
+}
+.timeEntry {
+    display: flex;
+    padding: 10px;
+    margin: 20px 0;
+}
+.emailId{
+    display: flex;
+    padding: 10px;
+    margin: 20px 0;
+    width: 300px !important;
+} 
+.txtfeild{
+    width: 300px;
+}
+.submitButton{
+    display: flex !important;
+    position: relative;
+    top: 30px;
+    padding-left: 20px;
+}
