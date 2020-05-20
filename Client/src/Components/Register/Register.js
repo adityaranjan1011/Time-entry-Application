@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Register.css';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import { TextField ,Button} from "@material-ui/core";
 
 
@@ -80,16 +80,13 @@ class Register extends Component {
       })
     }
   }
+
+
   handleSubmit=(event)=>{  
    
     event.preventDefault();
     
     try{
-      const data = {
-        firstName: this.state.firstName,
-        userName: this.state.userName,
-        email: this.state.email,
-       };
       const user_body= this.state;
       fetch('http://localhost:5000/api/register',{
         method:"POST",
@@ -103,6 +100,9 @@ class Register extends Component {
       reg_email:'',
       isDisabled:true
       });
+
+     
+
     }catch(err){
       console.log(err.message);
     }    
@@ -112,20 +112,18 @@ class Register extends Component {
       
       <div className="Register" >
         <h1> Register YourSelf </h1>
-        <form className="timeEntry" Validate autoComplete="off">
+        <form className="timeEntry" noValidate autoComplete="off">
         <TextField id="standard-basic" 
         label="Name"
         value={this.state.reg_name}
         onChange={this.firstHandler}
-        id="firstname"
         name="firstname"
         />        
         </form>  
         <form className="timeEntry" noValidate autoComplete="off">
         <TextField id="standard-basic" label="User Name" 
          value={this.state.user_name}
-         onChange={this.secondHandler}
-         id="userName" 
+         onChange={this.secondHandler} 
          name="userName"
         />        
         </form>  
