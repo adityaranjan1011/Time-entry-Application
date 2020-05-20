@@ -9,16 +9,8 @@ function App() {
   return (
    <Router>
     <div className="App">
-        <Route path="/" exact render={
-          () =>{
-            return  <Register/>
-          }
-        }/>
-          <Route path="/entry" exact render={
-          () =>{
-            return  <TimeEntry/>
-          }
-        }/>      
+        <Route path="/" exact render={() => { return  <Register/> }}/>
+        <Route path="/entry" exact render={() => { return  <TimeEntry/>}}/>      
     </div>
 
    </Router>
