@@ -5,21 +5,28 @@ import InputLabel from "@material-ui/core/InputLabel";
 import { NativeSelect, Button,TextField } from "@material-ui/core";
 
 class TimeEntry extends Component {
-  // constructor(props){
-  // super(props);
-  // this.state = {};
-  // }
+  constructor(props){
+  super(props);
+  this.state = {};
+  this.changeHandler = this.changeHandler.bind(this);
+  }
 
   // componentWillMount(){}
   // componentDidMount(){}
   // componentWillUnmount(){}
 
   // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
+  // shouldComponentUpdate(){}event.preventDefault();
   // componentWillUpdate(){}
   // componentDidUpdate(){}
 
+  changeHandler = (event) => {
+    console.log(event);
+    event.preventDefault();
+    window.location.pathname='';
+  }
   render() {
+    
     return (
       <div className="TimeEntry">
         <form className="timeEntry" noValidate autoComplete="off">
@@ -75,7 +82,7 @@ class TimeEntry extends Component {
           />
         </form>
         </div>
-        <Button className="btnSubmit" variant="contained" color="primary">
+        <Button className="btnSubmit" variant="contained" color="primary" onClick={this.changeHandler}>
   Register
 </Button>
       </div>

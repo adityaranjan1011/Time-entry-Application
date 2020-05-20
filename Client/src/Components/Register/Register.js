@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Register.css';
-import { Redirect } from 'react-router-dom';
 import { TextField ,Button} from "@material-ui/core";
 
 
@@ -96,13 +95,13 @@ class Register extends Component {
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(user_body)
       });
-      alert('Registered Successful');
       this.setState({
       reg_name:'',
       user_name:'',
       reg_email:'',
       isDisabled:true
       });
+    window.location.pathname="/entry";
     }catch(err){
       console.log(err.message);
     }    
@@ -112,7 +111,7 @@ class Register extends Component {
       
       <div className="Register" >
         <h1> Register YourSelf </h1>
-        <form className="timeEntry" Validate autoComplete="off">
+        <form className="timeEntry" validate="true" autoComplete="off">
         <TextField id="standard-basic" 
         label="Name"
         value={this.state.reg_name}
@@ -138,7 +137,7 @@ class Register extends Component {
         onChange={this.thirdHandler}       
         />        
          {this.state.emailError ? <span style={{color: "red"}}>Please Enter valid email address</span> : ''}
-        </form>  
+        </form>
         <Button className="submitButton" variant="contained" color="primary" disabled={this.state.isDisabled} onClick={this.handleSubmit}>
   Register
 </Button>
