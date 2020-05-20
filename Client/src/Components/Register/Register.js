@@ -98,7 +98,7 @@ class Register extends Component {
       reg_email:'',
       isDisabled:true
       });
-    window.location.pathname="/entry";
+    // window.location.pathname="/entry";
     }catch(err){
       console.log(err.message);
     }    

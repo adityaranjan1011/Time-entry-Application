@@ -65,7 +65,7 @@ class TimeEntry extends Component {
         start_time:'',
         end_time:''
        });
-       window.location.pathname='';
+      //  window.location.pathname='';
     }catch(err){
       console.log(err);
     }
